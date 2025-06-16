@@ -3,12 +3,13 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 
+# Corrected urlpatterns with standard indentation
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('force.urls')),  # ✅ الآن كل شيء يبدأ من "/"
-    
+    path('', include('force.urls')),
 ]
-# ONLY during development (DEBUG=True), serve media files
+
+# The rest of your file remains the same
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
