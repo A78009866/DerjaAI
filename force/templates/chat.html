@@ -198,12 +198,12 @@
         </div>
         <div class="chat-box" id="chat-box"></div>
         <div class="chat-input-area">
-            <div class="typing-indicator" id="typing-indicator">
-                <span></span><span></span><span></span>
-            </div>
-            <input type="text" id="user-input" placeholder="اكتب رسالتك هنا...">
-            <button id="send-button">إرسال</button>
-        </div>
+    {% csrf_token %} <div class="typing-indicator" id="typing-indicator">
+        <span></span><span></span><span></span>
+    </div>
+    <input type="text" id="user-input" placeholder="اكتب رسالتك هنا...">
+    <button id="send-button">إرسال</button>
+</div>
     </div>
 
     <div class="modal-overlay" id="name-modal" style="display: none;">
