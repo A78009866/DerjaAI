@@ -5,7 +5,8 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('chat/', include('force.urls')), # هذا السطر الجديد يحل المشكلة
+    path('', include('force.urls')),  # ✅ الآن كل شيء يبدأ من "/"
+    
 ]
 # ONLY during development (DEBUG=True), serve media files
 if settings.DEBUG:
