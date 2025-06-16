@@ -324,7 +324,7 @@
                         role: msg.role, parts: [msg.content]
                     }));
 
-                    const response = await fetch('/chat/ai/ask/', {
+                    const response = await fetch('/ai/ask/', {
                         method: 'POST',
                         headers: { 'Content-Type': 'application/json', 'X-CSRFToken': getCookie('csrftoken') },
                         body: JSON.stringify({ prompt, history: formattedHistoryForAPI, userName, aiName })
